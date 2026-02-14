@@ -1,0 +1,30 @@
+items.Hoverboard.name=Hyboard
+items.Hoverboard_Crude.name=Hyboard - Crude
+items.Hoverboard_Wood.name=Hyboard - Wood
+items.Hoverboard_Copper.name=Hyboard - Copper
+items.Hoverboard_Iron.name=Hyboard - Iron
+items.Hoverboard_Thorium.name=Hyboard - Thorium
+items.Hoverboard_Cobalt.name=Hyboard - Cobalt
+items.Hoverboard_Adamantite.name=Hyboard - Adamantite
+items.Hoverboard_Prisma.name=Hyboard - Prisma
+items.Hyboard_ConWIP.name=Hyboard - Constuction Sign
+items.Hyboard_Broom.name=Hyboard - Quidditch Broom
+items.Hyboard_Carpet.name=Hyboard - Magic Carpet
+items.Hyboard_Staff.name=Hyboard - Monkey King
+items.Hyboard_Sword.name=Hyboard - Tri-Sword
+items.Hyboard_Cloud.name=Hyboard - Nimbus
+items.Hyboard_Mcfly.name=Hyboard - McFly
+items.Hyboard_FDragon.name=Hyboard - Dragon
+
+
+
+items.Bench_Hoverboard.name=Hyboard Station
+items.Bench_Hoverboard.description=Used to craft Hyboards. <i>The hyboards are the closest mere mortals have ever come to mastering flight. Had they mastered them sooner, perhaps they wouldn't take so much fall damage.
+
+benchCategories.hyboard= Hyboard
+benchCategories.hyboardMisc= Fun Hyboards
+benchCategories.hyboardT1= Hyboard Tier 1
+benchCategories.hyboardT2= Hyboard Tier 2
+benchCategories.hyboardT3= Hyboard Tier 3
+benchCategories.hyboardT4= Hyboard Tier 4
+benchCategories.hyboardBrooms= Brooms

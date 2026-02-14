@@ -1,0 +1,161 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Hyboard_Broom.name"
+  },
+  "Parent": "Template_Glider",
+  "Icon": "Icons/ItemsGenerated/Hyboard_Broom.png",
+  "Model": "Items/Glider/Hyboard_Broom_Inhand.blockymodel",
+  "Texture": "Items/Glider/Hyboard_Broom.png",
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "Quality": "Uncommon",
+  "ItemLevel": 5,
+  "MaxStack": 1,
+  "Categories": [
+    "Items.Tools"
+  ],
+  "Glider": {
+    "FallSpeedMultiplier": 0.25,
+    "HorizontalSpeedMultiplier": 1.4,
+    "TerminalVelocity": -1,
+    "Speed": 15
+  },
+  "Interactions": {
+    "Primary": {
+      "RequireNewClick": true,
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Next": {
+            "Type": "EffectCondition",
+            "EntityEffectIds": [
+              "Stamina_Broken"
+            ],
+            "Match": "None",
+            "Next": {
+              "Type": "ToggleGlider"
+            }
+          },
+          "Costs": {
+            "Stamina": 0.001
+          }
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "GlidingActive": 1
+          },
+          "Next": {
+            "Type": "ApplyForce",
+            "Direction": {
+              "X": 0,
+              "Y": 0,
+              "Z": -1
+            },
+            "AdjustVertical": false,
+            "WaitForGround": false,
+            "Force": 15,
+            "Next": {
+              "Type": "ChangeStat",
+              "StatModifiers": {
+                "Stamina": -0.001
+              }
+            }
+          }
+        }
+      ]
+    },
+    "SwapFrom": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "GlidingActive": 1
+          },
+          "Next": {
+            "Type": "ToggleGlider"
+          }
+        },
+        {
+          "Type": "ChangeActiveSlot"
+        }
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "GlidingActive": [
+      {
+        "Condition": [
+          1,
+          1
+        ],
+        "Model": "Items/Glider/Hyboard_Broom.blockymodel",
+        "Texture": "Items/Glider/Hyboard_Broom.png",
+        "Particles": [
+          {
+            "SystemId": "Hyboards_Smoke_Trail",
+            "Color": "#faff30",
+            "Scale": 1,
+            "PositionOffset": {
+              "Y": -1,
+              "Z": 0,
+              "X": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.25,
+    "Rotation": [
+      25,
+      128,
+      22.5
+    ],
+    "Translation": [
+      11,
+      12
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Glider",
+      "Hoverboard"
+    ]
+  },
+  "Recipe": {
+    "TimeSeconds": 3.5,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 15
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Leather_Light",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 15
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Bench_Hoverboard",
+        "Type": "Crafting",
+        "Categories": [
+          "HyboardMisc"
+        ],
+        "RequiredTierLevel": 1
+      }
+    ]
+  }
+}
